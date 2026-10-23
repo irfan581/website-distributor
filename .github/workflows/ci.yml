@@ -1,0 +1,33 @@
+name: CI
+
+# Memeriksa setiap push dan pull request: build situs Nuxt.
+# Deploy tetap dikerjakan di server, tidak dari sini.
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Nuxt (build situs)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Pasang dependensi
+        run: npm ci
+
+      - name: Build
+        run: npm run build

@@ -1,0 +1,437 @@
+@import 'tailwindcss';
+
+/* Design system Tani Makmur (Tailwind v4). Token warna dan huruf mengikuti brand guideline hal. 21 dan 22. */
+
+/* Font judul berlisensi dari brand asli tidak disertakan di salinan ini; jatuh ke serif bawaan. */
+
+@theme {
+  /* Oranye resmi. tmk-400/500 hanya untuk isian dan ikon; teks memakai tmk-600 ke atas agar kontrasnya cukup. */
+  --color-tmk-50: #fff6ea;
+  --color-tmk-100: #ffe9c7;
+  --color-tmk-200: #fed394;
+  --color-tmk-300: #fdb85a;
+  --color-tmk-400: #fdaa1a;
+  --color-tmk-500: #fc8004;
+  --color-tmk-600: #c74a03;
+  --color-tmk-700: #a83b02;
+  --color-tmk-800: #8a3002;
+  --color-tmk-900: #6b2502;
+
+  /* ---- Warna sekunder: hijau Tani Makmur (aksen 10% di brand guideline) ----
+     leaf-700 adalah hijau resmi guideline (#007d3e), kontras ~5,25:1 di atas
+     putih sehingga aman dipakai langsung untuk teks maupun aksen. */
+  --color-leaf-50: #eafaf1;
+  --color-leaf-100: #d1f3e0;
+  --color-leaf-200: #a3e6c1;
+  --color-leaf-300: #6fd49f;
+  --color-leaf-400: #3ab97b;
+  --color-leaf-500: #159c5e;
+  --color-leaf-600: #0c8a4c;
+  --color-leaf-700: #007d3e;
+  --color-leaf-800: #016430;
+  --color-leaf-900: #014f27;
+
+  /* ---- Netral: abu hangat kehijauan ---- */
+  --color-ink-50: #f8f9f8;
+  --color-ink-100: #f1f3f1;
+  --color-ink-200: #e3e7e4;
+  --color-ink-300: #cbd2cd;
+  /* ink-400 dan ink-500 dipakai untuk teks kecil di atas putih maupun
+     --color-surface-muted. Nilainya dipilih agar keduanya tetap ≥ 4,5:1
+     pada kedua latar tersebut (WCAG AA), bukan sekadar terlihat "abu muda". */
+  --color-ink-400: #677370;
+  --color-ink-500: #5f6b66;
+  --color-ink-600: #515b56;
+  --color-ink-700: #3c4441;
+  --color-ink-800: #262c29;
+  --color-ink-900: #141917;
+  --color-ink-950: #0b0e0d;
+
+  /* ---- Latar ---- */
+  --color-surface: #ffffff;
+  /* Putih gading resmi guideline (#f5f3ec), 30% dari formula warna 60-30-10. */
+  --color-surface-muted: #f5f3ec;
+  /* Latar bingkai foto produk. Sama persis dengan warna kanvas foto pupuk
+     (`LATAR` di scripts/katalog-pdf/ekstrak.py, rgb 246 243 238), supaya tepi
+     foto persegi tidak tampak sebagai kotak di dalam bingkainya. */
+  --color-foto: #f6f3ee;
+
+  /* Tipografi: judul = --font-heading (Apropal), sub-judul = --font-display, isi = --font-sans. */
+  --font-heading: 'Apropal Bold', ui-serif, Georgia, serif;
+  --font-display: 'Noto Sans Bengali', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Noto Sans Bengali', ui-sans-serif, system-ui, sans-serif;
+
+  /* Ukuran judul beranda; dikecilkan agar tiga barisnya muat di satu layar 1440 px. */
+  --text-hero: clamp(2rem, 1.3rem + 2.9vw, 3.5rem);
+  --text-display: clamp(2rem, 1.35rem + 3.1vw, 3.75rem);
+  --text-title: clamp(1.625rem, 1.25rem + 1.7vw, 2.5rem);
+  --text-heading: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --text-lead: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+
+  /* ---- Ritme & bentuk ---- */
+  --radius-card: 1.25rem;
+  --radius-pill: 999px;
+
+  /** Bingkai gambar produk 1:1. Gambar dipasang `object-contain`, jadi tidak ada yang terpotong. */
+  --aspect-produk: 1 / 1;
+  --shadow-lift: 0 1px 2px rgb(20 25 23 / 0.04), 0 12px 32px -12px rgb(20 25 23 / 0.14);
+  --shadow-float: 0 2px 4px rgb(20 25 23 / 0.04), 0 24px 60px -20px rgb(20 25 23 / 0.22);
+
+  /* ---- Easing khas TMK ---- */
+  --ease-tmk: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-tmk-in: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ==========================================================================
+   Dasar
+   ========================================================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink-700);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* Jaring pengaman: tidak boleh ada scroll horizontal di lebar mana pun */
+    overflow-x: clip;
+  }
+
+  /* Heading bawaan memakai gaya sub-judul. Apropal hanya lewat `text-hero`, `text-display`, `text-title`. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    color: var(--color-ink-900);
+    font-weight: 700;
+    letter-spacing: -0.011em;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Fokus terlihat jelas untuk navigasi keyboard */
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-tmk-500);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-tmk-500);
+    color: #fff;
+  }
+}
+
+/* ==========================================================================
+   Utility komposit
+   ========================================================================== */
+
+@utility container-tmk {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 84rem;
+  padding-inline: 1.25rem;
+
+  @media (width >= 768px) {
+    padding-inline: 2rem;
+  }
+  @media (width >= 1280px) {
+    padding-inline: 3rem;
+  }
+}
+
+/* Section dengan ritme vertikal lega dan konsisten */
+@utility section-tmk {
+  /* Jarak antar section; dikecilkan agar halaman tidak renggang. */
+  padding-block: clamp(2.75rem, 1.9rem + 3.8vw, 5.5rem);
+}
+
+/* Apropal hanya punya satu bobot (700). Meminta 600 membuat peramban
+   memalsukan tebal, jadi ketiga utility judul di bawah selalu 700. */
+@utility text-hero {
+  font-family: var(--font-heading);
+  font-size: var(--text-hero);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+@utility text-display {
+  font-family: var(--font-heading);
+  font-size: var(--text-display);
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.1;
+}
+
+@utility text-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-title);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.18;
+}
+
+/* Tingkat sub-judul. Sengaja memakai --font-display, bukan --font-heading:
+   sebagian h2 kecil juga memakai utility ini, dan pada ukuran sekecil itu
+   perannya sudah sub-judul, bukan judul. */
+@utility text-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-heading);
+  font-weight: 700;
+  letter-spacing: -0.011em;
+  line-height: 1.3;
+}
+
+@utility text-lead {
+  font-size: var(--text-lead);
+  line-height: 1.65;
+  color: var(--color-ink-600);
+}
+
+/* Label kecil di atas judul section */
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-tmk-600);
+}
+
+/* Panel kaca untuk navbar & overlay */
+@utility glass-tmk {
+  background: color-mix(in srgb, white 72%, transparent);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-ink-200) 70%, transparent);
+}
+
+/* Bingkai gambar produk, satu-satunya tempat rasio itu dipakai. */
+@utility bingkai-produk {
+  aspect-ratio: var(--aspect-produk);
+}
+
+/** Bingkai gambar halaman detail: tegak tetapi tingginya dibatasi; di ponsel persegi. */
+@utility bingkai-detail {
+  aspect-ratio: 1 / 1;
+  max-height: 21rem;
+
+  /* Tablet: halaman masih satu kolom, jadi bingkai selebar layar dengan tinggi
+     terbatas menjadi pita lebar dengan foto kecil di tengahnya. Lebarnya ikut
+     dibatasi supaya bingkai tetap persegi, seukuran fotonya. */
+  @media (width >= 640px) {
+    max-width: 30rem;
+    max-height: 30rem;
+  }
+
+  /* Desktop: poster pestisida 4:5; foto pupuk persegi lewat `--rasio-detail`. */
+  @media (width >= 1024px) {
+    aspect-ratio: var(--rasio-detail, 4 / 5);
+    max-width: none;
+    max-height: 32rem;
+  }
+}
+
+/* Kartu dasar dengan hover lift */
+@utility card-tmk {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-ink-200);
+  border-radius: var(--radius-card);
+  /* 0,3 detik, bukan 0,5: ini reaksi terhadap kursor, dan reaksi yang datang
+     setengah detik kemudian terasa seperti tertinggal, bukan halus. */
+  transition:
+    transform 0.3s var(--ease-tmk),
+    box-shadow 0.3s var(--ease-tmk),
+    border-color 0.3s var(--ease-tmk);
+}
+
+@utility card-lift {
+  &:hover {
+    /* Diturunkan dari -6px. Pada kartu yang berjajar rapat, angkatan 6 px
+       terbaca sebagai kartu yang lepas dari barisnya; 3 px cukup untuk
+       menandakan ia bisa diklik tanpa merusak barisnya. */
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-float);
+    border-color: color-mix(in srgb, var(--color-tmk-300) 60%, transparent);
+  }
+}
+
+/* Teks gradien headline, hanya untuk hero gelap, memakai oranye cerah. */
+@utility text-gradient-tmk {
+  background: linear-gradient(
+    100deg,
+    var(--color-tmk-500) 0%,
+    var(--color-tmk-400) 55%,
+    var(--color-leaf-400) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Motif tanda tangan: garis kontur ladang */
+@utility contour-bg {
+  background-image:
+    radial-gradient(
+      ellipse 80% 55% at 50% 0%,
+      color-mix(in srgb, var(--color-tmk-100) 55%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 100% 100%,
+      color-mix(in srgb, var(--color-leaf-100) 45%, transparent),
+      transparent 70%
+    );
+}
+
+/* Butiran halus supaya gradien tidak terlihat "plastik" */
+@utility grain {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Menyembunyikan scrollbar pada baris yang di-scroll horizontal */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Animasi: state awal reveal + transisi halaman
+   ========================================================================== */
+
+/* Elemen yang akan di-reveal GSAP disembunyikan lebih dulu agar tidak
+   "berkedip" sebelum hydration. Kelas ini dilepas oleh useReveal(). */
+@layer components {
+  /** Ditaruh di layer `components` agar utility seperti `hidden` dari pemanggil tetap menang. */
+  .btn-tmk {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .switch-tmk {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Isi TIDAK disembunyikan lewat CSS; `useReveal` yang menyembunyikan lewat JS, supaya isi tetap terbaca bila animasi gagal. */
+  [data-reveal] {
+    will-change: transform, opacity;
+  }
+
+  /* Hanya hero yang disembunyikan sejak cat pertama, untuk mencegah kedipan sebelum GSAP siap. */
+  [data-hero-eyebrow],
+  [data-hero-text],
+  [data-hero-action],
+  [data-hero-card],
+  [data-hero-scroll] {
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  [data-hero-line] {
+    transform: translateY(108%);
+    will-change: transform;
+  }
+
+  /* Transisi halaman `out-in`: keluar 0,24 detik, masuk 0,56 detik. Hanya opacity dan transform. */
+  .page-leave-active {
+    transition:
+      opacity 0.24s var(--ease-tmk),
+      transform 0.24s var(--ease-tmk);
+  }
+
+  .page-enter-active {
+    transition:
+      opacity 0.56s var(--ease-tmk),
+      transform 0.56s var(--ease-tmk);
+  }
+
+  .page-enter-from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  .page-leave-to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  /* Di layar sempit jaraknya dipendekkan: geseran yang sama terasa lebih jauh
+     pada bidang yang lebih kecil, dan gerak besar di ponsel membuat perpindahan
+     terasa berat. */
+  @media (width < 768px) {
+    .page-enter-from {
+      transform: translateY(10px);
+    }
+
+    .page-leave-to {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+/* ==========================================================================
+   Aksesibilitas: hormati preferensi gerak minimal
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Konten wajib tetap terbaca meski animasi dimatikan.
+     Hero ikut disebut di sini karena HomeHero.vue berhenti lebih awal saat
+     gerak minimal aktif, sehingga tidak ada yang memunculkannya kembali. */
+  [data-reveal],
+  [data-hero-line],
+  [data-hero-eyebrow],
+  [data-hero-text],
+  [data-hero-action],
+  [data-hero-card],
+  [data-hero-scroll] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

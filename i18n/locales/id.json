@@ -1,0 +1,287 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "products": "Produk",
+    "services": "Layanan",
+    "coverage": "Jangkauan",
+    "articles": "Artikel",
+    "gallery": "Galeri",
+    "contact": "Kontak",
+    "menu": "Menu",
+    "close": "Tutup",
+    "openMenu": "Buka menu navigasi",
+    "closeMenu": "Tutup menu navigasi",
+    "allProducts": "Lihat Semua Produk",
+    "megaTitle": "Kategori Produk",
+    "megaDescription": "Pupuk non-subsidi dan produk perlindungan tanaman, tersedia sepanjang tahun tanpa kuota.",
+    "sales": "Sales"
+  },
+  "common": {
+    "learnMore": "Selengkapnya",
+    "viewDetail": "Lihat Detail",
+    "viewAll": "Lihat Semua",
+    "readMore": "Baca Selengkapnya",
+    "contactSales": "Hubungi Sales",
+    "exploreProducts": "Jelajahi Produk",
+    "whatsapp": "WhatsApp",
+    "backTo": "Kembali ke {page}",
+    "loading": "Memuat…",
+    "empty": "Belum ada data untuk ditampilkan.",
+    "error": "Terjadi kesalahan saat memuat data.",
+    "retry": "Coba Lagi",
+    "products": "produk",
+    "minuteRead": "{n} menit baca",
+    "home": "Beranda",
+    "language": "Bahasa",
+    "switchLanguage": "Ganti bahasa",
+    "scrollDown": "Gulir ke bawah",
+    "since": "Sejak",
+    "close": "Tutup"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Distributor Pertanian · Madiun, Jawa Timur",
+      "titleLine1": "Sarana produksi pertanian",
+      "titleHighlight": "yang selalu tersedia",
+      "titleLine2": "saat musim panen",
+      "description": "Tani Makmur mendistribusikan pupuk non-subsidi dan produk perlindungan tanaman ke petani, toko pertanian, koperasi, dan distributor di seluruh Jawa Timur hingga Jawa Tengah.",
+      "cardStock": "Stok siap kirim",
+      "cardStockValue": "{count} produk",
+      "cardCoverage": "Wilayah dilayani",
+      "cardCoverageValue": "{count} kab./kota",
+      "cardSince": "Melayani sejak",
+      "cardSinceValue": "2018"
+    },
+    "categories": {
+      "eyebrow": "Kategori",
+      "title": "Pupuk, ZPT, dan pestisida dari satu distributor",
+      "description": "{products} produk dalam {categories} kategori. Pilih kategori untuk melihat kandungan dan ukuran kemasan setiap produk."
+    },
+    "featured": {
+      "eyebrow": "Produk Unggulan",
+      "title": "Yang paling sering dipesan mitra kami",
+      "description": "Dipilih berdasarkan permintaan nyata dari toko pertanian dan kelompok tani di wilayah kami."
+    },
+    "about": {
+      "eyebrow": "Tentang Tani Makmur",
+      "title": "Berawal dari satu showroom di Madiun",
+      "cta": "Kenali Perusahaan Kami"
+    },
+    "why": {
+      "eyebrow": "Mengapa Tani Makmur",
+      "title": "Alasan mitra kami bertahan bertahun-tahun",
+      "description": "Bukan karena harga termurah, melainkan karena barang ada saat dibutuhkan dan penjelasannya jujur."
+    },
+    "coverage": {
+      "eyebrow": "Jangkauan Distribusi",
+      "title": "Enam belas kabupaten dan kota, dua provinsi",
+      "description": "Rute pengiriman reguler yang menjangkau dari Pacitan di selatan sampai Tuban di utara, menembus hingga Blora di Jawa Tengah.",
+      "hub": "Pusat distribusi",
+      "cta": "Lihat Detail Jangkauan"
+    },
+    "services": {
+      "eyebrow": "Layanan",
+      "title": "Lebih dari sekadar mengirim barang",
+      "description": "Kami mendampingi dari perencanaan kebutuhan sampai evaluasi hasil di lahan."
+    },
+    "partners": {
+      "eyebrow": "Mitra & Principal",
+      "title": "Produk dari produsen yang sudah teruji",
+      "description": "Kami bekerja sama dengan produsen pupuk BUMN maupun swasta serta principal perlindungan tanaman berskala global."
+    },
+    "activities": {
+      "eyebrow": "Kegiatan Kami",
+      "title": "Yang terjadi di gudang, toko, dan lahan",
+      "cta": "Buka Galeri"
+    },
+    "promos": {
+      "eyebrow": "Promo & Program",
+      "title": "Penawaran yang sedang berjalan",
+      "description": "Program musiman dan skema kemitraan untuk koperasi, toko, dan pembelian volume besar."
+    },
+    "articles": {
+      "eyebrow": "Artikel Terbaru",
+      "title": "Pengetahuan yang bisa langsung dipakai di lahan",
+      "description": "Ditulis tim agronomi kami berdasarkan pertanyaan yang paling sering muncul di lapangan."
+    },
+    "cta": {
+      "title": "Butuh penawaran untuk musim tanam berikutnya?",
+      "description": "Sampaikan komoditas, luas lahan, dan wilayah Anda. Tim kami akan menyusun perkiraan kebutuhan beserta ketersediaan stoknya.",
+      "primary": "Hubungi Sales",
+      "secondary": "Lihat Katalog Produk"
+    },
+    "testimonials": {
+      "eyebrow": "Kata Mitra Kami",
+      "title": "Dari petani, koperasi, dan toko pertanian"
+    }
+  },
+  "catalog": {
+    "title": "Katalog Produk",
+    "description": "Pupuk non-subsidi dan produk perlindungan tanaman yang kami distribusikan. Semua tersedia tanpa kuota RDKK.",
+    "search": "Cari produk atau bahan aktif…",
+    "searchLabel": "Cari produk",
+    "category": "Kategori",
+    "brand": "Merek",
+    "sort": "Urutkan",
+    "allCategories": "Semua Kategori",
+    "allBrands": "Semua Merek",
+    "sortCatalog": "Urutan Katalog",
+    "sortFeatured": "Unggulan",
+    "sortNameAsc": "Nama A ke Z",
+    "sortNameDesc": "Nama Z ke A",
+    "sortNewest": "Terbaru",
+    "filters": "Filter",
+    "reset": "Atur Ulang",
+    "resultCount": "Menampilkan {from} sampai {to} dari {total} produk",
+    "noResult": "Produk tidak ditemukan",
+    "noResultHint": "Coba ubah kata kunci atau atur ulang filter yang sedang aktif.",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya",
+    "page": "Halaman {n}",
+    "apply": "Tampilkan {total} Produk",
+    "filterAndSort": "Filter & Urutkan",
+    "productCount": "{total} produk"
+  },
+  "product": {
+    "specs": "Spesifikasi",
+    "benefits": "Keunggulan",
+    "usage": "Cara Penggunaan",
+    "packaging": "Kemasan Tersedia",
+    "documents": "Dokumen Produk",
+    "related": "Produk Terkait",
+    "brand": "Merek",
+    "category": "Kategori",
+    "askPrice": "Tanya Harga & Stok",
+    "whatsappText": "Halo Tani Makmur, saya ingin menanyakan ketersediaan dan harga produk {name}.",
+    "updatedAt": "Diperbarui {date}",
+    "documentNote": "Dokumen akan tersedia setelah diunggah dari dashboard.",
+    "gallery": "Galeri produk",
+    "viewImage": "Lihat gambar {n}",
+    "pendingInfo": "Keterangan manfaat dan anjuran pemakaian sedang dilengkapi bersama tim Tani Makmur."
+  },
+  "about": {
+    "title": "Tentang Tani Makmur",
+    "description": "Toko pertanian di Madiun yang melayani petani Jawa Timur dan Jawa Tengah sejak 2018.",
+    "story": "Cerita Kami",
+    "vision": "Visi",
+    "mission": "Misi",
+    "position": "Posisi Kami",
+    "values": "Yang Membedakan Kami",
+    "timeline": "Perjalanan Kami",
+    "advantages": "Keunggulan Kami",
+    "team": "Tim Lapangan",
+    "teamDescription": "Tim sales kami tersebar di empat wilayah dan siap datang langsung ke lokasi Anda.",
+    "coverageLabel": "Wilayah layanan"
+  },
+  "services": {
+    "title": "Layanan Kami",
+    "description": "Lima bentuk dukungan yang kami sediakan untuk petani, toko, koperasi, dan mitra bisnis.",
+    "whatYouGet": "Yang Anda dapatkan"
+  },
+  "coverage": {
+    "title": "Jangkauan Distribusi",
+    "description": "Enam belas kabupaten dan kota di Jawa Timur dan Jawa Tengah dalam rute pengiriman reguler kami.",
+    "areas": "Wilayah Terjangkau",
+    "eastJava": "Jawa Timur",
+    "centralJava": "Jawa Tengah",
+    "deliveryTitle": "Dukungan Pengiriman",
+    "outsideTitle": "Di luar wilayah ini?",
+    "outsideDescription": "Kami tetap melayani pengiriman ke luar daftar wilayah untuk pemesanan dalam jumlah tertentu. Hubungi tim kami untuk membicarakan kemungkinannya."
+  },
+  "articles": {
+    "title": "Artikel & Wawasan",
+    "description": "Edukasi pertanian, pengetahuan produk, dan kabar terbaru dari Tani Makmur.",
+    "publishedOn": "Dipublikasikan {date}",
+    "by": "Oleh {author}",
+    "tags": "Tag",
+    "related": "Artikel Lainnya",
+    "share": "Bagikan artikel"
+  },
+  "gallery": {
+    "title": "Galeri",
+    "description": "Gudang, showroom, kegiatan distribusi, dan pendampingan petani di wilayah kami.",
+    "all": "Semua",
+    "gudang": "Gudang",
+    "toko": "Toko",
+    "produk": "Produk",
+    "kegiatan": "Kegiatan",
+    "distribusi": "Distribusi",
+    "petani": "Petani"
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "description": "Sampaikan kebutuhan Anda. Tim kami membalas pada jam kerja.",
+    "address": "Alamat",
+    "phone": "Telepon",
+    "email": "Email",
+    "hours": "Jam Operasional",
+    "maps": "Lokasi di Peta",
+    "openMaps": "Buka di Google Maps",
+    "formTitle": "Kirim Pesan",
+    "formDescription": "Isi formulir berikut dan tim kami akan menghubungi Anda kembali.",
+    "name": "Nama Lengkap",
+    "namePlaceholder": "Nama Anda",
+    "emailPlaceholder": "nama{'@'}email.com",
+    "phoneLabel": "Nomor WhatsApp",
+    "phonePlaceholder": "08xxxxxxxxxx",
+    "company": "Perusahaan / Kelompok Tani",
+    "companyPlaceholder": "Opsional",
+    "subject": "Subjek",
+    "subjectPlaceholder": "Contoh: Permintaan penawaran NPK",
+    "message": "Pesan",
+    "messagePlaceholder": "Ceritakan kebutuhan Anda: komoditas, luas lahan, dan wilayah pengiriman.",
+    "submit": "Kirim Pesan",
+    "submitting": "Mengirim…",
+    "successTitle": "Pesan terkirim",
+    "reference": "Nomor referensi",
+    "sendAnother": "Kirim pesan lain",
+    "errorTitle": "Pesan gagal dikirim",
+    "errorGeneric": "Terjadi kesalahan. Coba lagi atau hubungi kami lewat WhatsApp.",
+    "orWhatsapp": "Ingin lebih cepat? Hubungi kami lewat WhatsApp.",
+    "required": "wajib diisi",
+    "orSales": "Atau hubungi langsung sales di wilayah Anda."
+  },
+  "footer": {
+    "tagline": "Distributor pupuk non-subsidi dan perlindungan tanaman untuk petani Jawa Timur dan Jawa Tengah.",
+    "company": "Perusahaan",
+    "products": "Produk",
+    "quickLinks": "Tautan Cepat",
+    "contactUs": "Hubungi Kami",
+    "social": "Media Sosial",
+    "socialSoon": "Kanal media sosial segera hadir.",
+    "rights": "Hak cipta dilindungi.",
+    "backToTop": "Kembali ke atas"
+  },
+  "error": {
+    "404Title": "Halaman tidak ditemukan",
+    "404Description": "Halaman yang Anda cari mungkin sudah dipindahkan atau tidak pernah ada.",
+    "500Title": "Terjadi kesalahan",
+    "500Description": "Sistem kami sedang bermasalah. Silakan coba beberapa saat lagi.",
+    "backHome": "Kembali ke Beranda",
+    "seeProducts": "Lihat Katalog Produk"
+  },
+  "sales": {
+    "title": "Tim Sales Tani Makmur",
+    "description": "Tim sales yang siap membantu kebutuhan produk pertanian sesuai wilayah layanan Anda.",
+    "seeAll": "Lihat Semua Sales",
+    "contactTeam": "Hubungi tim sales",
+    "centralPending": "Nomor pusat sedang disiapkan.",
+    "allRegions": "Semua Wilayah",
+    "filterLabel": "Pilih wilayah Anda",
+    "resultCount": "Menampilkan {n} sales",
+    "empty": "Belum ada sales untuk wilayah ini.",
+    "emptyHint": "Coba pilih wilayah lain, atau kirim pesan lewat halaman kontak.",
+    "coverage": "Wilayah layanan",
+    "chat": "Chat WhatsApp",
+    "homeTitle": "Hubungi Tim Sales Kami",
+    "homeDescription": "Tujuh sales tersebar di wilayah layanan kami. Pilih wilayah Anda, lalu hubungi langsung orang yang menanganinya.",
+    "pickRegion": "Pilih wilayah Anda",
+    "pickRegionHint": "Kami tampilkan sales yang menangani wilayah tersebut.",
+    "askAbout": "Tanyakan produk ini",
+    "close": "Tutup",
+    "changeRegion": "Ganti wilayah",
+    "waGeneral": "Halo {name}, saya ingin menanyakan produk Tani Makmur untuk wilayah {zone}.",
+    "waProduct": "Halo {name}, saya ingin menanyakan ketersediaan dan harga produk {product}."
+  }
+}
